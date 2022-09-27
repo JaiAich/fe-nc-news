@@ -5,13 +5,13 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-button-wrapper">
-        <div key="articles">
+        <div>
           <Link to="/articles">Articles</Link>
         </div>
-        <div key="topics">
+        <div>
           <Link to="/topics">Topics</Link>
         </div>
-        <div key="users">
+        <div>
           <Link to="/users">Users</Link>
         </div>
       </div>
