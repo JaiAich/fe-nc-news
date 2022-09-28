@@ -1,9 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import AllArticles from "./components/AllArticles";
+import Articles from "./components/Articles";
 import AllTopics from "./components/AllTopics";
-import SingleTopic from "./components/SingleTopic";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,9 +13,9 @@ function App() {
           <Header />
           <NavBar />
           <Routes>
-            <Route path="/articles" element={<AllArticles />} />
+            <Route path="/articles" element={<Articles />} />
             <Route path="/topics" element={<AllTopics />} />
-            <Route path="/topics/:topic_slug" element={<SingleTopic />} />
+            <Route path="/topics/:topic_slug" element={<Articles />} />
           </Routes>
         </div>
       </div>
