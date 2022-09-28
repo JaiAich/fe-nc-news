@@ -1,9 +1,0 @@
-.nav-button-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.nav-button-wrapper > div {
-  margin: 0 5%;
-}

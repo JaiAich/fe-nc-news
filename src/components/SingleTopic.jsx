@@ -1,20 +1,24 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getArticles } from "../utils/api";
 import ArticleCard from "./ArticleCard";
-import "./components.css";
 
-const AllArticles = () => {
-  const [articles, setArticles] = useState([]);
+const SingleTopic = () => {
+  const { topic_slug } = useParams();
   const [isLoading, setisLoading] = useState(false);
+  const [articles, setArticles] = useState([]);
+
+  const formattedSlug = `${topic_slug
+    .slice(0, 1)
+    .toUpperCase()}${topic_slug.slice(1)}`;
 
   useEffect(() => {
     setisLoading(true);
-    getArticles(undefined, "created_at", "desc").then((data) => {
-      setArticles(data.articles);
+    getArticles(topic_slug, "created_at", "desc").then((data) => {
       setisLoading(false);
+      setArticles(data.articles);
     });
-  }, []);
+  }, [topic_slug]);
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -22,6 +26,7 @@ const AllArticles = () => {
 
   return (
     <div className="articles-wrapper">
+      <h2 className="filtered-articles-header">Articles about: {formattedSlug}</h2>
       <ul className="articles-list">
         {articles.map((article) => {
           return (
@@ -35,4 +40,4 @@ const AllArticles = () => {
   );
 };
 
-export default AllArticles;
+export default SingleTopic;
