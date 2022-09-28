@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   background-color: whitesmoke;
+  height: 100%;
 }
 
 .content-wrapper {
