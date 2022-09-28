@@ -1,4 +1,4 @@
-import "./ArticleCard.css";
+import "./components.css";
 
 const ArticleCard = ({ article }) => {
   const dateObj = new Date(article.created_at);
