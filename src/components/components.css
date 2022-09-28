@@ -87,6 +87,53 @@ h3 {
   padding: 0 15px;
 }
 
+/* Full article */
+.article-wrapper {
+  margin: 50px;
+}
+
+.date-topic-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 0 0;
+}
+
+.full-article-date {
+  width: 50%;
+  padding: 5px 0;
+  border-left: 1px solid black;
+}
+
+.full-article-topic {
+  width: 50%;
+  padding: 5px 0;
+  border-right: 1px solid black;
+}
+
+.body-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.article-body {
+  padding: 0 25px;
+  text-align: left;
+}
+
+.votes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 0 25px 0 0;
+}
+
+.article-votes {
+  font-size: 1.5rem;
+}
+
 /* Topics */
 .topics-list {
   display: flex;

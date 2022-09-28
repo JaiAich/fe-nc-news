@@ -1,10 +1,8 @@
+import { formatDate } from "../utils/stringFormatter";
 import "./components.css";
 
 const ArticleCard = ({ article }) => {
-  const dateObj = new Date(article.created_at);
-  const dateString = `${dateObj.getDate()}/${
-    dateObj.getMonth() + 1
-  }/${dateObj.getFullYear()}`;
+  const dateString = formatDate(article.created_at);
 
   return (
     <div className="article-card">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getArticles } from "../utils/api";
 import ArticleCard from "./ArticleCard";
 import "./components.css";
@@ -40,7 +40,9 @@ const Articles = () => {
         {articles.map((article) => {
           return (
             <li key={article.article_id}>
-              <ArticleCard article={article} />
+              <Link to={`/articles/${article.article_id}`}>
+                <ArticleCard article={article} />
+              </Link>
             </li>
           );
         })}
