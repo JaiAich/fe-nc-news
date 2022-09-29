@@ -191,6 +191,56 @@ h3 {
   pointer-events: none;
 }
 
+/* Comments */
+.comments-wrapper {
+  padding: 0 25px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  text-align: left;
+}
+
+/* Comment Card */
+.comment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: max(0.5%, 5px) 1%;
+  padding: 0.5% 1% 0.5% 0.5%;
+  border: 2px solid var(--highlightColour);
+  border-radius: 10px;
+  box-shadow: 2.5px 2.5px var(--highlightColour);
+  background-color: white;
+}
+
+.comment-author-wrapper {
+  display: flex;
+  padding-top: 5px;
+}
+
+.comment-author {
+  padding: 0 10px 0 0;
+  border-right: solid 1px rgb(82, 82, 82);
+  font-weight: 600;
+}
+
+.comment-date {
+  padding: 0 0 0 10px;
+  border-left: solid 1px rgb(82, 82, 82);
+}
+
+.comment-body {
+  padding: 0 10px;
+}
+
+.comment-votes {
+  font-size: 1.5rem;
+  padding: 0 10px;
+}
+
 /* Topics */
 .topics-list {
   display: flex;
