@@ -60,7 +60,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   margin: 1.5% 1%;
-  padding: 1% 0 0.5% 0;
+  padding: 1% 1% 0.5% 1%;
   border: 2px solid var(--primaryColour);
   border-radius: 10px;
   box-shadow: 5px 5px var(--primaryColour);
@@ -89,25 +89,33 @@ h3 {
 
 /* Full article */
 .article-wrapper {
-  margin: 50px;
+  margin: 50px 2%;
 }
 
 .date-topic-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin: 10px 0 0 0;
 }
 
 .full-article-date {
-  width: 50%;
-  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
   border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 50px;
 }
 
 .full-article-topic {
-  width: 50%;
-  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
   border-right: 1px solid black;
+  height: 50px;
 }
 
 .body-container {
@@ -122,16 +130,65 @@ h3 {
   text-align: left;
 }
 
+/* Votes */
 .votes-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 15px;
-  margin: 0 25px 0 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-left: 1px solid black;
+  height: 50px;
 }
 
 .article-votes {
   font-size: 1.5rem;
+  width: 3rem;
+}
+
+.vote-btn {
+  background-color: unset;
+  border: none;
+}
+
+.vote-btn:hover {
+  cursor: pointer;
+}
+
+.api-error {
+  animation: shake 150ms 3 linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(3px, 0);
+  }
+  50% {
+    transform: translate(-3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.upvote-arrow {
+  fill: #9a9a9a;
+}
+
+.upvote-arrow-clicked {
+  fill: #ff5703;
+}
+
+.downvote-arrow {
+  fill: #9a9a9a;
+}
+
+.downvote-arrow-clicked {
+  fill: #0370ff;
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 /* Topics */
