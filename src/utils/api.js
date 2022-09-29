@@ -25,3 +25,11 @@ export const getFullArticle = (article_id) => {
     return res.data;
   });
 };
+
+export const changeArticleVotes = (article_id, value) => {
+  return newsApi
+    .patch(`/articles/${article_id}`, { inc_votes: value })
+    .then((res) => {
+      return res.data;
+    });
+};
