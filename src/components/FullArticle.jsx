@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { changeArticleVotes, getFullArticle } from "../utils/api";
 import { formatDate, formatTopic } from "../utils/stringFormatter";
 import { UpVoteArrow, DownVoteArrow } from "../icons/VoteArrows";
+import Comments from "./Comments";
 import "./components.css";
 
 const FullArticle = () => {
@@ -79,9 +80,10 @@ const FullArticle = () => {
           </button>
         </div>
       </div>
-      <div className="body-container">
+      <article className="body-container">
         <p className="article-body">{article.body}</p>
-      </div>
+      </article>
+      <Comments article_id={article_id} />
     </div>
   );
 };
