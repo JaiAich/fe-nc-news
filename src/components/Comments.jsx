@@ -6,7 +6,7 @@ import AddComment from "./AddComment";
 const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [userComment, setUserComment] = useState("")
+  const [userComment, setUserComment] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -22,7 +22,7 @@ const Comments = ({ article_id }) => {
 
   return (
     <section className="comments-wrapper">
-      <AddComment userComment={userComment}setUserComment={setUserComment} article_id={article_id}/>
+      <AddComment setUserComment={setUserComment} article_id={article_id} />
       <ul className="comments-list">
         {comments.map((comment) => {
           return (
