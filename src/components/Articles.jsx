@@ -6,7 +6,7 @@ import "./components.css";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const [isLoading, setisLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { topic_slug } = useParams();
 
   let formattedSlug;
@@ -18,10 +18,10 @@ const Articles = () => {
   }
 
   useEffect(() => {
-    setisLoading(true);
+    setIsLoading(true);
     getArticles(topic_slug, "created_at", "desc").then((data) => {
       setArticles(data.articles);
-      setisLoading(false);
+      setIsLoading(false);
     });
   }, [topic_slug]);
 

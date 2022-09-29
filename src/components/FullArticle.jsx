@@ -80,9 +80,9 @@ const FullArticle = () => {
           </button>
         </div>
       </div>
-      <div className="body-container">
+      <article className="body-container">
         <p className="article-body">{article.body}</p>
-      </div>
+      </article>
       <Comments article_id={article_id} />
     </div>
   );
