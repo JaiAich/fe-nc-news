@@ -39,3 +39,14 @@ export const getCommentsByArticleId = (article_id) => {
     return res.data;
   });
 };
+
+export const addCommentToArticle = (article_id, username, comment) => {
+  return newsApi
+    .post(`/articles/${article_id}/comments`, {
+      username: username,
+      body: comment,
+    })
+    .then((res) => {
+      return res.data;
+    });
+};
