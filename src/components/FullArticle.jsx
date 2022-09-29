@@ -81,15 +81,6 @@ const FullArticle = () => {
       </div>
       <div className="body-container">
         <p className="article-body">{article.body}</p>
-        {/* <div className="votes-container">
-          <button className={upVoteBtn} onClick={() => handleVoteClick(1)}>
-            <UpVoteArrow className={upVoteClass} />
-          </button>
-          <div className={votesClassName}>{votes}</div>
-          <button className={downVoteBtn} onClick={() => handleVoteClick(-1)}>
-            <DownVoteArrow className={downVoteClass} />
-          </button>
-        </div> */}
       </div>
     </div>
   );
