@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addCommentToArticle } from "../utils/api";
 
-const AddComment = ({ setUserComment, article_id }) => {
+const AddComment = ({ setUserComment, article_id, setNewCommentId }) => {
   const [newCommentBody, setNewCommentBody] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -13,6 +13,7 @@ const AddComment = ({ setUserComment, article_id }) => {
     addCommentToArticle(article_id, username, newCommentBody).then((data) => {
       setUserComment(newCommentBody);
       setIsSubmitting(false);
+      setNewCommentId(data.comment_id)
     });
   };
 

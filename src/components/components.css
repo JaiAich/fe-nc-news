@@ -277,6 +277,24 @@ h3 {
   cursor: pointer;
 }
 
+.highlight-comment {
+  background-color: rgb(245, 255, 220);
+  animation: pop-comment 200ms 3 linear;
+
+}
+
+@keyframes pop-comment {
+  0% {
+    transform: translate(0, -5px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 /* Topics */
 .topics-list {
   display: flex;
