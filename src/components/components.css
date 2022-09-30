@@ -241,6 +241,60 @@ h3 {
   padding: 0 10px;
 }
 
+/* Add Comment Form */
+.add-comment-form {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.add-comment-input {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  width: 80%;
+  height: 80px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.add-comment-btn {
+  width: 40%;
+  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+  height: 50px;
+  border: 2px solid var(--primaryColour);
+  background-color: rgb(216, 229, 230);
+  border-radius: 5px;
+}
+
+.add-comment-btn:hover {
+  background-color: rgb(187, 199, 200);
+  cursor: pointer;
+}
+
+.highlight-comment {
+  background-color: rgb(245, 255, 220);
+  animation: pop-comment 200ms 3 linear;
+
+}
+
+@keyframes pop-comment {
+  0% {
+    transform: translate(0, -5px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 /* Topics */
 .topics-list {
   display: flex;
