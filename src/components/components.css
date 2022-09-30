@@ -280,7 +280,6 @@ h3 {
 .highlight-comment {
   background-color: rgb(245, 255, 220);
   animation: pop-comment 200ms 3 linear;
-
 }
 
 @keyframes pop-comment {
@@ -293,6 +292,20 @@ h3 {
   100% {
     transform: translate(0, 0);
   }
+}
+
+/* Sort by */
+.sort-by-container {
+  display: flex;
+  margin: 40px auto 10px auto;
+}
+
+.sort-by {
+  padding: 0 10px 0 10px;
+}
+
+.order-by {
+  padding: 0 10px 0 10px;
 }
 
 /* Topics */
